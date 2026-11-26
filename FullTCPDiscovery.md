@@ -45,4 +45,4 @@ TTL 63 is consistent with the device originating responses with TTL 64 and cross
 
 ---
 
-[Previous: Device Discovery](DeviceDiscovery.md) | [Return to README](README.md)
+[Previous: Device Discovery](DeviceDiscovery.md) | [Return to README](README.md) | [Next: Target IP Investigation](TargetIP.md)
