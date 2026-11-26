@@ -138,3 +138,89 @@ Do not assume your phone will have an open high port, advertise ADB, or communic
 - A ten-second capture starts without a permission error.
 - You know which terminal to use.
 - You have your own test device and replacement values.
+
+# Beginner 1st Run Checklist
+
+## Start with one known device
+
+Use your own phone and computer first. The point of the first run is to learn how each observation connects. You can repeat it as a blind identification exercise later.
+
+Do the setup before running commands. Work through these checkpoints in order. If a checkpoint fails, record the exact error and stop that branch rather than guessing.
+
+| Step | What to do | What counts as success |
+| --- | --- | --- |
+| 1 | Open Kali and run the five version checks | Each tool reports a version |
+| 2 | List Windows capture interfaces | You can identify the physical active adapter |
+| 3 | Run the ten-second capture smoke test | Capture starts and ends without a driver/permission error |
+| 4 | Open the phone's current network details | You can privately note its current IP/MAC |
+| 5 | Query Windows neighbors | You understand which rows belong to the physical interface; an absent phone is not an automatic failure |
+| 6 | Run a 90-second discovery capture | You can distinguish your target traffic from unrelated broadcasts |
+| 7 | Scan the one authorized device | Nmap finishes; report what actually responds |
+| 8 | If a TCP port is open, try service/TLS probes | Record a recognized protocol or keep it unknown |
+| 9 | If open/closed ports are available, try OS detection | Record guesses and warnings, including no exact match |
+| 10 | If the PC/device exchange UDP, look up the Windows-side port | A contemporaneous process association, or an explained missing socket |
+| 11 | If the process is CrossDeviceService, optionally inspect minimized metadata | Supporting OS/client-type context; skip if the cache does not exist |
+| 12 | Compare current phone IP/MAC with network evidence | Matching current values, or a documented mismatch |
+| 13 | Check IPv6 too | You understand that an IPv4-only filter is incomplete |
+| 14 | Write separate device and service conclusions | An unknown service is an acceptable result |
+
+
+# Branches you can skip
+
+- No open TCP ports: skip the TLS, cipher and open/closed-port OS examples. Continue with captures, current settings and identity comparison.
+- No CrossDevice/companion traffic: skip the process/cache branch. An unpaired phone will not necessarily create the original UDP conversation.
+- No ADB advertisement or reason to test ADB: skip the optional greeting.
+- No IPv6 displayed: record that observation; do not invent an IPv6 address.
+- No traffic in a short capture: check the interface, wake your owned device and try a new bounded capture. The network may simply be quiet.
+
+
+# *“Where do I paste this?”*
+
+| What you see | Where it belongs |
+| --- | --- |
+| `wsl` commands | Windows PowerShell |
+| `sudo`, `apt`, `nmap`, `openssl`, `python3` | Kali |
+| `powershell.exe -NoProfile -Command ...` | The original notebook calls this from Kali |
+| A standalone `Get-Net...` command | Windows PowerShell |
+| `/mnt/c/Program Files/Wireshark/tshark.exe` | Kali calling a Windows executable |
+| `C:\Program Files\Wireshark\tshark.exe` with `&` | Windows PowerShell |
+
+*Beginner note: $ is sometimes the visible Linux prompt, and PS ...> is a Windows prompt. Neither is something you copy from an output example. A password prompt may show no characters as you type. Ctrl+C stops a live capture. Wait for scans to finish before pasting the next command.*
+
+# If something doesn't work
+
+| Problem | Try this |
+| --- | --- |
+| `sudo` or `apt` not recognized | You are probably in PowerShell; open Kali |
+| `Get-NetNeighbor` not found in Kali | Use the original `powershell.exe` wrapper, or run `Get-NetNeighbor` in Windows PowerShell |
+| `nmap`/`tshark`/`arp-scan` command not found | Complete Kali package installation and rerun its version check |
+| Windows `tshark.exe` path missing | Verify TShark was included and check the actual Windows installation path |
+| Capture denied/no useful interfaces | Check Npcap and capture permissions; use elevated Windows PowerShell if your Npcap configuration requires it |
+| `arp-scan` finds only a virtual gateway | In NAT-mode WSL this is expected; use Windows' physical capture/neighbor view |
+| A scan says Host is up but no ports answer | With `-Pn` this label can be an assumption; look for actual responses |
+| Phone is missing from the neighbor cache | Wake it, inspect current network settings and observe new traffic; a cache is not a full inventory |
+| Metadata file missing | Skip that optional branch; its schema/path is not guaranteed |
+| Port changes between tests | Record the device state/time and resample carefully; do not assume a cause |
+| TLS/ADB probe returns nothing | Report inconclusive; do not force an identity |
+
+# Write down what happened
+
+Keep exact IPs, MACs and timestamps in private notes. Use labels such as Computer A and Phone A in feedback you plan to share.
+
+Test machine:
+Windows version:
+WSL/Kali versions:
+Nmap/TShark/OpenSSL/Python versions:
+Physical adapter selected:
+Setup checkpoint reached:
+Notebook section reached:
+Command attempted, with identifiers removed:
+Exact error, with identifiers removed:
+What I expected:
+What actually happened:
+What wording confused me:
+Device identity conclusion:
+Remote service conclusion:
+Steps skipped and why:
+
+A completed run can correctly end with “I identified my device, but I still don't know what that TCP service is.” The tutorial should make the reasoning reproducible without requiring the original device or port behavior.
