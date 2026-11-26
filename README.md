@@ -20,12 +20,6 @@ The original investigation follows a consistent structure:
 
 Device identification and service identification are treated as separate conclusions.
 
-## Project Documentation
-
-- [Original Investigation](INVESTIGATION.md)
-- [Beginner Setup Guide](SETUP.md)
-- [Network Discovery OneNote Notebook](https://1drv.ms/o/c/4698bd72d12c7cec/IgC4YIdFFolrQZaWuW0jhaLHAdtUC5kvYJxnrEmiZnyrEt8?e=M5Qdqd)
-
 ## Tools and Technologies
 
 | Tool | Purpose |
