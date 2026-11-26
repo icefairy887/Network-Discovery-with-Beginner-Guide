@@ -1,6 +1,6 @@
-# Network Discovery for Beginners
+# Network Discovery with beginner guide 
 
-A hands-on network discovery and device fingerprinting lab using Windows, WSL2, Kali Linux and evidence-based analysis.
+A network discovery and device fingerprinting lab using Windows, WSL2, Kali Linux and evidence-based analysis.
 
 ## About the Project
 
