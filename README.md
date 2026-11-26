@@ -35,6 +35,11 @@ Device identification and service identification are treated as separate conclus
 | OpenSSL | TLS analysis |
 | Python 3 | Supplemental protocol analysis |
 
+## Project Documentation
+
+- [Device Discovery](DeviceDiscovery.md)
+- [Beginner Setup Guide](SETUP.md)
+
 ## Project Status
 
 **Version 0.1 — Beginner Beta**
