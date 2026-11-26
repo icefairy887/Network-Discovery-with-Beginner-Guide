@@ -37,10 +37,28 @@ Device identification and service identification are treated as separate conclus
 
 ## Project Documentation
 
-- [Device Discovery](DeviceDiscovery.md)
+### Beginner Resources
+
 - [Beginner Setup Guide](SETUP.md)
-- [The Unknown Device and TCP Service](TargetIP.md)
-- [Link Target IP to Device Record](linktargetIPtodevicerecord.md)
+
+
+### Original Investigation
+
+1. [Device Discovery](DeviceDiscovery.md)
+2. [Full TCP Discovery](FullTCPDiscovery.md)
+3. [The Unknown Device and TCP Service](TargetIP.md)
+4. [OS Stack Fingerprint](OSStackFingerPrint.md)
+5. [IPv6 Fingerprint](IPV6FingerPrint.md)
+6. [ADB Verification](ADBverification.md)
+7. [WSL NAT Bypass](WSLNATBypass.md)
+8. [Windows PID — Owner of UDP Port](winPIDownerofUDPport.md)
+9. [Link Target IP to Device Record](linktargetIPtodevicerecord.md)
+10. [Evidence Chain](EvidenceChain.md)
+11. [Conclusion](Conclusion.md)
+
+### OneNote Notebook
+
+- [Network Discovery — Beginner Edition](https://1drv.ms/o/c/4698bd72d12c7cec/IgC4YIdFFolrQZaWuW0jhaLHAdtUC5kvYJxnrEmiZnyrEt8?e=2hBrrY)
 
 ## Project Status
 
