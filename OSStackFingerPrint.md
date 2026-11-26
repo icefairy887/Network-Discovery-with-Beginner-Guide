@@ -22,7 +22,7 @@ Potentially narrow this from an unknown service to Android/Linux, Apple, Windows
 
 ## Output
 
-![Device OS identification](images/device-os-id%281%29.png)
+![Device OS identification](images/device-os-id.png)
 
 Nmap's stack matcher ranks Android 12 at 91%, with broader Android/Linux families among the other matches, but explicitly says there is no exact match.
 
