@@ -39,6 +39,7 @@ Device identification and service identification are treated as separate conclus
 
 - [Device Discovery](DeviceDiscovery.md)
 - [Beginner Setup Guide](SETUP.md)
+- [The Unknown Device and TCP Service](TargetIP.md)
 
 ## Project Status
 
