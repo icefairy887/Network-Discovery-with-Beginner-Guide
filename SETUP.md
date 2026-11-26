@@ -4,7 +4,7 @@ A network discovery and device fingerprinting lab using Windows, WSL2, Kali Linu
 
 # Network Discovery — beginner setup
 
-# What you need before you start
+## What you need before you start
 
 - A Windows 11 computer with administrator access and internet access for installation. The WSL commands also support sufficiently recent Windows 10, but the walkthrough assumes Windows 11.
 - One phone or other device you own and can inspect.
