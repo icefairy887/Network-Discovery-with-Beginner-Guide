@@ -45,7 +45,7 @@ Identifying information has been redacted or replaced with documentation values.
 
 ## Authorized Use
 
-This material is intended for educational research and authorized network analysis. Only test devices and networks you own or have explicit permission to examine.
+Only test devices and networks you own or have explicit permission to examine.
 
 ## Copyright
 
