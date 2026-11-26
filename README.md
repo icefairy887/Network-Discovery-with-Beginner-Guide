@@ -72,6 +72,14 @@ Identifying information has been redacted or replaced with documentation values.
 
 Only test devices and networks you own or have explicit permission to examine.
 
+## References
+
+[Microsoft's WSL networking documentation](https://learn.microsoft.com/windows/wsl/networking) 
+
+[NAT is WSL's default topology](https://learn.microsoft.com/windows/wsl/networking)
+
+[AOSP ADB transport protocol](https://android.googlesource.com/platform/packages/modules/adb/+/refs/heads/android14-release/protocol.txt)
+
 ## Copyright
 
 Copyright © 2026. All rights reserved.
