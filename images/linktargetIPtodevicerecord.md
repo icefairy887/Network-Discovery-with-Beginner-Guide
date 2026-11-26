@@ -23,7 +23,8 @@ The phone's current network identifiers matched the previously observed network 
 
 ## Controlled Disappearance/Reappearance Test
 
-Additional evidence was collected by changing the Wi-Fi connection state on the S25 and observing the previously identified TCP port.
+Turn wifi off on S25 and then run this in Kali: sudo nmap -n -Pn -p43917 --reason --max-retries 1 --host-timeout 15s 10.0.0.3
+
 
 ## Output
 
@@ -64,7 +65,15 @@ These are possible explanations, not confirmed causes.
 
 ## Windows CrossDevice Communication
 
-The next observation examined network traffic associated with the previously identified device using the Windows copy of TShark from Wireshark Portable x64.
+Check whether the Windows CrossDevice UDP conversation disappears.
+
+**Run in Kali:**
+
+```bash
+"/mnt/c/Users/<USERNAME>/Downloads/WiresharkPortable64/App/Wireshark/tshark.exe" -i 5 -n -a duration:20 -f "host 10.00.00.3"
+```
+
+**Redaction note:** The Windows username and target IP address have been replaced with placeholders.
 
 ## Output Findings
 
